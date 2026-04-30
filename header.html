@@ -79,19 +79,6 @@
   transition:0.3s;
 }
 
-/* ===== HAMBURGER ANIMATION ===== */
-.menu-toggle.active span:nth-child(1){
-  transform:rotate(45deg) translate(5px,5px);
-}
-
-.menu-toggle.active span:nth-child(2){
-  opacity:0;
-}
-
-.menu-toggle.active span:nth-child(3){
-  transform:rotate(-45deg) translate(5px,-5px);
-}
-
 /* ===== MOBILE ===== */
 @media (max-width:768px){
 
@@ -158,37 +145,3 @@
   </p>
 
 </footer>
-
-<script>
-
-/* ===== TOGGLE MENU ===== */
-function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("active");
-  document.getElementById("menuToggle").classList.toggle("active");
-}
-
-/* ===== CLOSE MENU ON CLICK ===== */
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    document.getElementById("navLinks").classList.remove("active");
-    document.getElementById("menuToggle").classList.remove("active");
-  });
-});
-
-/* ===== ACTIVE PAGE DETECT ===== */
-const currentPage = location.pathname.split("/").pop();
-document.querySelectorAll(".nav-links a").forEach(link => {
-  if(link.getAttribute("href") === currentPage){
-    link.classList.add("active");
-  }
-});
-
-/* ===== SCROLL EFFECT ===== */
-window.addEventListener("scroll", function(){
-  document.getElementById("siteHeader").classList.toggle("scrolled", window.scrollY > 10);
-});
-
-/* ===== AUTO YEAR ===== */
-document.getElementById("year").textContent = new Date().getFullYear();
-
-</script>
