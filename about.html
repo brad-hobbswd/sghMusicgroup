@@ -231,6 +231,41 @@ fetch("header.html")
   .then(res => res.text())
   .then(data => {
     document.getElementById("header").innerHTML = data;
+
+    // Toggle menu
+    window.toggleMenu = function(){
+      document.getElementById("navLinks").classList.toggle("active");
+      document.getElementById("menuToggle").classList.toggle("active");
+    }
+
+    // Close menu
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("active");
+        document.getElementById("menuToggle").classList.remove("active");
+      });
+    });
+
+    // Active page
+    const currentPage = location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      if(link.getAttribute("href") === currentPage){
+        link.classList.add("active");
+      }
+    });
+
+    // Scroll effect
+    window.addEventListener("scroll", function(){
+      document.getElementById("siteHeader")
+        .classList.toggle("scrolled", window.scrollY > 10);
+    });
+
+    // Year
+    const yearEl = document.getElementById("year");
+    if(yearEl){
+      yearEl.textContent = new Date().getFullYear();
+    }
+
   });
 </script>
 
