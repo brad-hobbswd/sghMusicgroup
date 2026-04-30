@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Team | SGH Music Group</title>
+
+<style>
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:system-ui;
+  background:#0c0a09;
+  color:#fff;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  border-bottom:1px solid #1f1f1f;
+}
+
+nav a{
+  color:#ddd;
+  text-decoration:none;
+}
+
+nav a:hover{
+  color:#fff;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:90px 20px 50px;
+}
+
+.hero h2{
+  font-size:36px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  color:#cfcfcf;
+}
+
+/* SECTION TEXT */
+.section-text{
+  text-align:center;
+  padding:30px 20px;
+}
+
+.section-text p{
+  max-width:700px;
+  margin:auto;
+  color:#cfcfcf;
+}
+
+/* GRID */
+.grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  padding:40px 20px;
+}
+
+/* CARD */
+.card{
+  border:1px solid #2a2a2a;
+  border-radius:10px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#fff;
+}
+
+/* IMAGE */
+.card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+
+/* CONTENT */
+.card-content{
+  padding:15px;
+  text-align:center;
+}
+
+.card a{
+  text-decoration:none;
+  color:#fff;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:8px 14px;
+  border:1px solid #fff;
+  font-size:12px;
+  border-radius:4px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:#777;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <h3>SGH Music Group</h3>
+  <a href="index.html">Home</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>Our Team</h2>
+
+  <p>
+    Each person represented here carries more than a voice. They carry a message meant to reach lives at the right moment.
+    This is a group connected by purpose, committed to sharing truth through music that speaks beyond the surface.
+  </p>
+</section>
+
+<!-- PURPOSE -->
+<section class="section-text">
+  <p>
+    Every artist and ministry here plays a role in reaching hearts, strengthening faith, and pointing people back to Jesus.
+    What is carried through each voice is handled with intention and care.
+  </p>
+</section>
+
+<!-- TEAM GRID -->
+<section class="grid">
+
+  <!-- THE HAGERS -->
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/7a1c2d_5f6e7d8c9b0a1d2c3e4f5a6b7c8d9e0~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
+    <div class="card-content">
+      <h4>The Hagers</h4>
+      <p style="font-size:13px; color:#cfcfcf;">
+        A ministry rooted in message, carrying truth through every song.
+      </p>
+    </div>
+  </div>
+
+  <!-- CRIMSON CHORD -->
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/7a1c2d_9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
+    <div class="card-content">
+      <h4>Crimson Chord</h4>
+    </div>
+  </div>
+
+  <!-- GREG FINCH -->
+  <div class="card">
+    <a href="https://www.greg-finch-ministries.com" target="_blank">
+      <img src="https://static.wixstatic.com/media/7a1c2d_1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
+      <div class="card-content">
+        <h4>Greg Finch</h4>
+        <span class="btn">Visit Ministry</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- CHRIS PERDUE -->
+  <div class="card">
+    <a href="https://www.chrisperduemusic.com" target="_blank">
+      <img src="https://static.wixstatic.com/media/7a1c2d_abcdef1234567890abcdef123456789~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
+      <div class="card-content">
+        <h4>Chris Perdue</h4>
+        <span class="btn">Visit Ministry</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- GREATER PURPOSE -->
+  <div class="card">
+    <a href="https://www.greaterpurposemusic.com" target="_blank">
+      <img src="https://static.wixstatic.com/media/7a1c2d_fedcba0987654321fedcba098765432~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
+      <div class="card-content">
+        <h4>Greater Purpose</h4>
+        <span class="btn">Visit Ministry</span>
+      </div>
+    </a>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © SGH Music Group
+</footer>
+
+</body>
+</html>
