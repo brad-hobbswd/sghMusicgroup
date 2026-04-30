@@ -115,6 +115,21 @@ a:active{
   color:#ffffff;
 }
 
+/* ===== LEADERSHIP IMAGE ===== */
+.leader-image{
+  display:flex;
+  justify-content:center;
+  margin:20px 0;
+}
+
+.leader-image img{
+  width:220px;
+  height:220px;
+  object-fit:cover;
+  border-radius:50%;
+  border:2px solid #d6a85b;
+}
+
 </style>
 
 </head>
@@ -137,7 +152,7 @@ a:active{
   </p>
 </section>
 
-<!-- ===== CONTACT INFO (NEW) ===== -->
+<!-- ===== CONTACT INFO ===== -->
 <section>
 
   <h3>Contact Information</h3>
@@ -178,6 +193,11 @@ a:active{
 <section>
 
   <h3>Leadership</h3>
+
+  <!-- ✅ IMAGE ADDED -->
+  <div class="leader-image">
+    <img src="IMG_0257.jpeg" alt="Stephanie Hager">
+  </div>
 
   <p class="highlight">Stephanie Hager</p>
 
@@ -266,7 +286,6 @@ a:active{
 <!-- ===== FOOTER ===== -->
 <div id="footer"></div>
 
-<!-- ===== LOAD HEADER + FOOTER + NAV ===== -->
 <script>
 Promise.all([
   fetch("header.html").then(res => res.text()),
