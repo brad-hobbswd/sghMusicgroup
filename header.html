@@ -1,0 +1,138 @@
+<header class="site-header">
+
+<style>
+
+/* ===== HEADER ===== */
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#0c0a09;
+  border-bottom:1px solid #1f1f1f;
+}
+
+/* ===== NAV ===== */
+.nav{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+}
+
+/* ===== LOGO ===== */
+.logo{
+  font-size:18px;
+  font-weight:600;
+  color:#fff;
+}
+
+/* ===== LINKS ===== */
+.nav-links{
+  display:flex;
+  gap:20px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#ddd;
+  font-size:14px;
+}
+
+.nav-links a:hover{
+  color:#fff;
+}
+
+/* ===== HAMBURGER ===== */
+.menu-toggle{
+  display:none;
+  flex-direction:column;
+  cursor:pointer;
+}
+
+.menu-toggle span{
+  height:2px;
+  width:25px;
+  background:#fff;
+  margin:4px 0;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width:768px){
+
+  .menu-toggle{
+    display:flex;
+  }
+
+  .nav-links{
+    position:absolute;
+    top:60px;
+    left:0;
+    width:100%;
+    background:#0c0a09;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    padding:20px 0;
+    display:none;
+    border-bottom:1px solid #1f1f1f;
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+}
+
+</style>
+
+<div class="nav">
+
+  <div class="logo">SGH Music Group</div>
+
+  <div class="menu-toggle" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="team.html">Team</a>
+    <a href="radio-releases.html">Radio</a>
+    <a href="news.html">News</a>
+  </div>
+
+</div>
+
+</header>
+
+<!-- ===== FOOTER ===== -->
+<footer style="text-align:center; padding:40px 20px; border-top:1px solid #1f1f1f; background:#0c0a09; color:#777; font-size:12px;">
+
+  <p style="margin-bottom:8px;">
+    © <span id="year"></span> SGH Music Group. All rights reserved.
+  </p>
+
+  <p>
+    Designed by 
+    <a href="https://brad-hobbswd.github.io/brad-hobbswd" target="_blank" style="color:#fff; text-decoration:none;">
+      Brad Hobbs Web Design
+    </a>
+  </p>
+
+</footer>
+
+<script>
+
+/* ===== MOBILE TOGGLE ===== */
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+/* ===== AUTO YEAR ===== */
+document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
