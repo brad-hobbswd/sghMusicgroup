@@ -74,6 +74,7 @@ body{
   width:100%;
   height:260px;
   object-fit:cover;
+  object-position:center;
 }
 
 /* CONTENT */
@@ -126,8 +127,9 @@ body{
 <!-- ===== TEAM GRID ===== -->
 <section class="grid">
 
+  <!-- THE HAGERS -->
   <div class="card">
-    <img src="https://static.wixstatic.com/media/7a1c2d_5f6e7d8c9b0a1d2c3e4f5a6b7c8d9e0~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
+    <img src="images/hagers.jpg" alt="The Hagers">
     <div class="card-content">
       <h4>The Hagers</h4>
       <p style="font-size:13px; color:#cfcfcf;">
@@ -136,16 +138,18 @@ body{
     </div>
   </div>
 
+  <!-- CRIMSON CHORD -->
   <div class="card">
-    <img src="https://static.wixstatic.com/media/7a1c2d_9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
+    <img src="images/crimson-chord.jpg" alt="Crimson Chord">
     <div class="card-content">
       <h4>Crimson Chord</h4>
     </div>
   </div>
 
+  <!-- GREG FINCH -->
   <div class="card">
     <a href="https://www.greg-finch-ministries.com" target="_blank">
-      <img src="https://static.wixstatic.com/media/7a1c2d_1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
+      <img src="images/greg-finch.jpg" alt="Greg Finch">
       <div class="card-content">
         <h4>Greg Finch</h4>
         <span class="btn">Visit Ministry</span>
@@ -153,9 +157,10 @@ body{
     </a>
   </div>
 
+  <!-- CHRIS PERDUE -->
   <div class="card">
     <a href="https://www.chrisperduemusic.com" target="_blank">
-      <img src="https://static.wixstatic.com/media/7a1c2d_abcdef1234567890abcdef123456789~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
+      <img src="images/chris-perdue.jpg" alt="Chris Perdue">
       <div class="card-content">
         <h4>Chris Perdue</h4>
         <span class="btn">Visit Ministry</span>
@@ -163,9 +168,10 @@ body{
     </a>
   </div>
 
+  <!-- GREATER PURPOSE -->
   <div class="card">
     <a href="https://www.greaterpurposemusic.com" target="_blank">
-      <img src="https://static.wixstatic.com/media/7a1c2d_fedcba0987654321fedcba098765432~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
+      <img src="images/greater-purpose.jpg" alt="Greater Purpose">
       <div class="card-content">
         <h4>Greater Purpose</h4>
         <span class="btn">Visit Ministry</span>
@@ -188,13 +194,11 @@ Promise.all([
   document.getElementById("header").innerHTML = headerData;
   document.getElementById("footer").innerHTML = footerData;
 
-  // Toggle menu
   window.toggleMenu = function(){
     document.getElementById("navLinks").classList.toggle("active");
     document.getElementById("menuToggle").classList.toggle("active");
   }
 
-  // Close menu
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
       document.getElementById("navLinks").classList.remove("active");
@@ -202,7 +206,6 @@ Promise.all([
     });
   });
 
-  // Active page
   const currentPage = location.pathname.split("/").pop();
   document.querySelectorAll(".nav-links a").forEach(link => {
     if(link.getAttribute("href") === currentPage){
@@ -210,13 +213,11 @@ Promise.all([
     }
   });
 
-  // Scroll effect
   window.addEventListener("scroll", function(){
     document.getElementById("siteHeader")
       .classList.toggle("scrolled", window.scrollY > 10);
   });
 
-  // Auto year
   const yearEl = document.getElementById("year");
   if(yearEl){
     yearEl.textContent = new Date().getFullYear();
