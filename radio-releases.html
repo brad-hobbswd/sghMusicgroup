@@ -110,6 +110,32 @@ button{
   cursor:pointer;
 }
 
+/* FORM CARD */
+.form-card{
+  max-width:600px;
+  margin:40px auto;
+  padding:30px 25px;
+  border:1px solid #2a2a2a;
+  border-radius:12px;
+  background:#111;
+  box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+/* INPUT IMPROVEMENT */
+.form-card input,
+.form-card textarea{
+  background:#0c0a09;
+  color:#fff;
+  border:1px solid #2a2a2a;
+}
+
+/* BUTTON */
+.form-card button{
+  background:#fff;
+  color:#000;
+  font-weight:600;
+}
+
 </style>
 
 </head>
@@ -185,17 +211,22 @@ button{
     Submit your song for radio consideration. Each submission is reviewed with care.
   </p>
 
-  <form id="demoForm">
+  <!-- FORM CARD -->
+  <div class="form-card">
 
-    <input type="text" placeholder="Artist Name" required>
-    <input type="text" placeholder="Song Title" required>
-    <input type="email" placeholder="Email Address" required>
-    <input type="text" placeholder="Link to Song">
-    <textarea placeholder="Additional Information"></textarea>
+    <form id="demoForm">
 
-    <button type="submit">Submit for Radio</button>
+      <input type="text" placeholder="Artist Name" required>
+      <input type="text" placeholder="Song Title" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="text" placeholder="Link to Song">
+      <textarea placeholder="Additional Information"></textarea>
 
-  </form>
+      <button type="submit">Submit for Radio</button>
+
+    </form>
+
+  </div>
 
   <p id="successMessage"
      style="display:none; margin-top:20px; color:#4ade80;">
