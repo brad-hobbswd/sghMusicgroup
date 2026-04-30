@@ -21,7 +21,7 @@ body{
 /* HERO */
 .hero{
   text-align:center;
-  padding:90px 20px 50px;
+  padding:120px 20px 50px;
 }
 
 .hero h2{
@@ -70,7 +70,6 @@ body{
   border-color:#fff;
 }
 
-/* IMAGE */
 .card img{
   width:100%;
   height:260px;
@@ -103,7 +102,7 @@ body{
 </head>
 <body>
 
-<!-- ===== HEADER LOAD ===== -->
+<!-- ===== HEADER ===== -->
 <div id="header"></div>
 
 <!-- ===== HERO ===== -->
@@ -127,7 +126,6 @@ body{
 <!-- ===== TEAM GRID ===== -->
 <section class="grid">
 
-  <!-- THE HAGERS -->
   <div class="card">
     <img src="https://static.wixstatic.com/media/7a1c2d_5f6e7d8c9b0a1d2c3e4f5a6b7c8d9e0~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
     <div class="card-content">
@@ -138,7 +136,6 @@ body{
     </div>
   </div>
 
-  <!-- CRIMSON CHORD -->
   <div class="card">
     <img src="https://static.wixstatic.com/media/7a1c2d_9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
     <div class="card-content">
@@ -146,7 +143,6 @@ body{
     </div>
   </div>
 
-  <!-- GREG FINCH -->
   <div class="card">
     <a href="https://www.greg-finch-ministries.com" target="_blank">
       <img src="https://static.wixstatic.com/media/7a1c2d_1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
@@ -157,7 +153,6 @@ body{
     </a>
   </div>
 
-  <!-- CHRIS PERDUE -->
   <div class="card">
     <a href="https://www.chrisperduemusic.com" target="_blank">
       <img src="https://static.wixstatic.com/media/7a1c2d_abcdef1234567890abcdef123456789~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
@@ -168,7 +163,6 @@ body{
     </a>
   </div>
 
-  <!-- GREATER PURPOSE -->
   <div class="card">
     <a href="https://www.greaterpurposemusic.com" target="_blank">
       <img src="https://static.wixstatic.com/media/7a1c2d_fedcba0987654321fedcba098765432~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80/file.jpg">
@@ -181,48 +175,54 @@ body{
 
 </section>
 
-<!-- ===== LOAD HEADER.HTML ===== -->
+<!-- ===== FOOTER ===== -->
+<div id="footer"></div>
+
+<!-- ===== LOAD HEADER + FOOTER + NAV ===== -->
 <script>
-fetch("header.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("header").innerHTML = data;
+Promise.all([
+  fetch("header.html").then(res => res.text()),
+  fetch("footer.html").then(res => res.text())
+]).then(([headerData, footerData]) => {
 
-    // Toggle menu
-    window.toggleMenu = function(){
-      document.getElementById("navLinks").classList.toggle("active");
-      document.getElementById("menuToggle").classList.toggle("active");
-    }
+  document.getElementById("header").innerHTML = headerData;
+  document.getElementById("footer").innerHTML = footerData;
 
-    // Close menu
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        document.getElementById("navLinks").classList.remove("active");
-        document.getElementById("menuToggle").classList.remove("active");
-      });
+  // Toggle menu
+  window.toggleMenu = function(){
+    document.getElementById("navLinks").classList.toggle("active");
+    document.getElementById("menuToggle").classList.toggle("active");
+  }
+
+  // Close menu
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      document.getElementById("navLinks").classList.remove("active");
+      document.getElementById("menuToggle").classList.remove("active");
     });
-
-    // Active page
-    const currentPage = location.pathname.split("/").pop();
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      if(link.getAttribute("href") === currentPage){
-        link.classList.add("active");
-      }
-    });
-
-    // Scroll effect
-    window.addEventListener("scroll", function(){
-      document.getElementById("siteHeader")
-        .classList.toggle("scrolled", window.scrollY > 10);
-    });
-
-    // Year
-    const yearEl = document.getElementById("year");
-    if(yearEl){
-      yearEl.textContent = new Date().getFullYear();
-    }
-
   });
+
+  // Active page
+  const currentPage = location.pathname.split("/").pop();
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    if(link.getAttribute("href") === currentPage){
+      link.classList.add("active");
+    }
+  });
+
+  // Scroll effect
+  window.addEventListener("scroll", function(){
+    document.getElementById("siteHeader")
+      .classList.toggle("scrolled", window.scrollY > 10);
+  });
+
+  // Auto year
+  const yearEl = document.getElementById("year");
+  if(yearEl){
+    yearEl.textContent = new Date().getFullYear();
+  }
+
+});
 </script>
 
 </body>
