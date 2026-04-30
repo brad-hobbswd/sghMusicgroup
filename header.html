@@ -2,7 +2,7 @@
 
 <style>
 
-/* ===== HEADER ===== */
+/* HEADER */
 .site-header{
   position:sticky;
   top:0;
@@ -12,14 +12,12 @@
   transition:0.3s;
 }
 
-/* ===== SCROLL EFFECT ===== */
 .site-header.scrolled{
   padding:5px 0;
   background:#0c0a09e6;
   backdrop-filter:blur(6px);
 }
 
-/* ===== NAV ===== */
 .nav{
   max-width:1100px;
   margin:auto;
@@ -29,14 +27,12 @@
   padding:15px 20px;
 }
 
-/* ===== LOGO ===== */
 .logo{
   font-size:18px;
   font-weight:600;
   color:#fff;
 }
 
-/* ===== LINKS ===== */
 .nav-links{
   display:flex;
   gap:25px;
@@ -46,25 +42,13 @@
   text-decoration:none;
   color:#bbb;
   font-size:14px;
-  position:relative;
 }
 
-/* ===== ACTIVE LINK ===== */
 .nav-links a.active{
   color:#fff;
 }
 
-.nav-links a.active::after{
-  content:"";
-  position:absolute;
-  bottom:-5px;
-  left:0;
-  width:100%;
-  height:2px;
-  background:#fff;
-}
-
-/* ===== HAMBURGER ===== */
+/* MOBILE */
 .menu-toggle{
   display:none;
   flex-direction:column;
@@ -76,15 +60,10 @@
   width:25px;
   background:#fff;
   margin:5px 0;
-  transition:0.3s;
 }
 
-/* ===== MOBILE ===== */
 @media (max-width:768px){
-
-  .menu-toggle{
-    display:flex;
-  }
+  .menu-toggle{display:flex;}
 
   .nav-links{
     position:fixed;
@@ -103,13 +82,11 @@
   .nav-links.active{
     right:0;
   }
-
 }
 
 </style>
 
 <div class="nav">
-
   <div class="logo">SGH Music Group</div>
 
   <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
@@ -125,23 +102,6 @@
     <a href="radio-releases.html">Radio</a>
     <a href="news.html">News</a>
   </div>
-
 </div>
 
 </header>
-
-<!-- ===== FOOTER ===== -->
-<footer style="text-align:center; padding:40px 20px; border-top:1px solid #1f1f1f; background:#0c0a09; color:#777; font-size:12px;">
-
-  <p style="margin-bottom:8px;">
-    © <span id="year"></span> SGH Music Group. All rights reserved.
-  </p>
-
-  <p>
-    Designed by 
-    <a href="https://brad-hobbswd.github.io/brad-hobbswd" target="_blank" style="color:#fff; text-decoration:none;">
-      Brad Hobbs Web Design
-    </a>
-  </p>
-
-</footer>
