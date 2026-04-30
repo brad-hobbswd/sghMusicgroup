@@ -18,19 +18,6 @@ body{
   color:#fff;
 }
 
-/* NAV */
-nav{
-  display:flex;
-  justify-content:space-between;
-  padding:20px;
-  border-bottom:1px solid #1f1f1f;
-}
-
-nav a{
-  color:#ddd;
-  text-decoration:none;
-}
-
 /* HERO */
 .hero{
   text-align:center;
@@ -123,25 +110,15 @@ button{
   cursor:pointer;
 }
 
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:30px;
-  color:#777;
-}
-
 </style>
 
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <h3>SGH Music Group</h3>
-  <a href="index.html">Home</a>
-</nav>
+<!-- ===== HEADER LOAD ===== -->
+<div id="header"></div>
 
-<!-- HERO -->
+<!-- ===== HERO ===== -->
 <section class="hero">
   <h2>Radio Releases</h2>
   <p>
@@ -150,7 +127,7 @@ footer{
   </p>
 </section>
 
-<!-- FEATURED PLAYER -->
+<!-- ===== FEATURED PLAYER ===== -->
 <section class="player">
 
   <h3>Featured Release</h3>
@@ -170,7 +147,7 @@ footer{
 
 </section>
 
-<!-- RELEASE GRID -->
+<!-- ===== RELEASE GRID ===== -->
 <section class="grid">
 
   <div class="card">
@@ -199,7 +176,7 @@ footer{
 
 </section>
 
-<!-- SUBMISSION FORM -->
+<!-- ===== SUBMISSION FORM ===== -->
 <section style="text-align:center; padding:60px 20px;">
 
   <h3>Submit Your Music</h3>
@@ -227,17 +204,23 @@ footer{
 
 </section>
 
-<!-- FOOTER -->
-<footer>
-  © SGH Music Group
-</footer>
-
+<!-- ===== SCRIPTS ===== -->
 <script>
+
+/* LOAD HEADER */
+fetch("header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+
+/* DEMO FORM */
 document.getElementById("demoForm").addEventListener("submit", function(e){
   e.preventDefault();
   document.getElementById("successMessage").style.display = "block";
   this.reset();
 });
+
 </script>
 
 </body>
