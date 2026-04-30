@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Radio Releases | SGH Music Group</title>
+
+<style>
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:system-ui;
+  background:#0c0a09;
+  color:#fff;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px;
+  border-bottom:1px solid #1f1f1f;
+}
+
+nav a{
+  color:#ddd;
+  text-decoration:none;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding:90px 20px 50px;
+}
+
+.hero h2{
+  font-size:36px;
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:700px;
+  margin:auto;
+  color:#cfcfcf;
+}
+
+/* GRID */
+.grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  padding:40px 20px;
+}
+
+/* CARD */
+.card{
+  border:1px solid #2a2a2a;
+  border-radius:10px;
+  overflow:hidden;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  border-color:#fff;
+}
+
+.card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:15px;
+  text-align:center;
+}
+
+.card p{
+  color:#cfcfcf;
+  font-size:13px;
+}
+
+/* PLAYER */
+.player{
+  text-align:center;
+  padding:60px 20px;
+}
+
+.player img{
+  width:100%;
+  max-width:400px;
+  border-radius:10px;
+}
+
+/* FORM */
+form{
+  max-width:500px;
+  margin:30px auto;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+input, textarea{
+  padding:12px;
+  border:none;
+  border-radius:6px;
+}
+
+button{
+  padding:12px;
+  background:#fff;
+  color:#000;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  color:#777;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <h3>SGH Music Group</h3>
+  <a href="index.html">Home</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <h2>Radio Releases</h2>
+  <p>
+    Every release carries more than a sound. It carries a message meant to reach hearts,
+    strengthen faith, and meet people in the moments that matter most.
+  </p>
+</section>
+
+<!-- FEATURED PLAYER -->
+<section class="player">
+
+  <h3>Featured Release</h3>
+
+  <p style="color:#cfcfcf; margin:10px 0 20px;">
+    Listen to the latest release currently impacting radio.
+  </p>
+
+  <img src="https://static.wixstatic.com/media/7a1c2d_sample1.jpg">
+
+  <h4 style="margin-top:15px;">He’ll Walk You Through The Fire</h4>
+  <p style="color:#cfcfcf;">The Hagers</p>
+
+  <audio controls style="width:100%; max-width:400px; margin-top:15px;">
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+</section>
+
+<!-- RELEASE GRID -->
+<section class="grid">
+
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/7a1c2d_sample1.jpg">
+    <div class="card-content">
+      <h4>He’ll Walk You Through The Fire</h4>
+      <p>The Hagers</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/7a1c2d_sample2.jpg">
+    <div class="card-content">
+      <h4>Current Release</h4>
+      <p>Artist Name</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://static.wixstatic.com/media/7a1c2d_sample3.jpg">
+    <div class="card-content">
+      <h4>Upcoming Release</h4>
+      <p>Artist Name</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- SUBMISSION FORM -->
+<section style="text-align:center; padding:60px 20px;">
+
+  <h3>Submit Your Music</h3>
+
+  <p style="max-width:600px; margin:auto; color:#cfcfcf;">
+    Submit your song for radio consideration. Each submission is reviewed with care.
+  </p>
+
+  <form id="demoForm">
+
+    <input type="text" placeholder="Artist Name" required>
+    <input type="text" placeholder="Song Title" required>
+    <input type="email" placeholder="Email Address" required>
+    <input type="text" placeholder="Link to Song">
+    <textarea placeholder="Additional Information"></textarea>
+
+    <button type="submit">Submit for Radio</button>
+
+  </form>
+
+  <p id="successMessage"
+     style="display:none; margin-top:20px; color:#4ade80;">
+     Submission received. We will review and respond soon.
+  </p>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © SGH Music Group
+</footer>
+
+<script>
+document.getElementById("demoForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  document.getElementById("successMessage").style.display = "block";
+  this.reset();
+});
+</script>
+
+</body>
+</html>
