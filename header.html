@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header" id="siteHeader">
 
 <style>
 
@@ -9,6 +9,14 @@
   z-index:1000;
   background:#0c0a09;
   border-bottom:1px solid #1f1f1f;
+  transition:0.3s;
+}
+
+/* ===== SCROLL EFFECT ===== */
+.site-header.scrolled{
+  padding:5px 0;
+  background:#0c0a09e6;
+  backdrop-filter:blur(6px);
 }
 
 /* ===== NAV ===== */
@@ -31,17 +39,29 @@
 /* ===== LINKS ===== */
 .nav-links{
   display:flex;
-  gap:20px;
+  gap:25px;
 }
 
 .nav-links a{
   text-decoration:none;
-  color:#ddd;
+  color:#bbb;
   font-size:14px;
+  position:relative;
 }
 
-.nav-links a:hover{
+/* ===== ACTIVE LINK ===== */
+.nav-links a.active{
   color:#fff;
+}
+
+.nav-links a.active::after{
+  content:"";
+  position:absolute;
+  bottom:-5px;
+  left:0;
+  width:100%;
+  height:2px;
+  background:#fff;
 }
 
 /* ===== HAMBURGER ===== */
@@ -55,7 +75,21 @@
   height:2px;
   width:25px;
   background:#fff;
-  margin:4px 0;
+  margin:5px 0;
+  transition:0.3s;
+}
+
+/* ===== HAMBURGER ANIMATION ===== */
+.menu-toggle.active span:nth-child(1){
+  transform:rotate(45deg) translate(5px,5px);
+}
+
+.menu-toggle.active span:nth-child(2){
+  opacity:0;
+}
+
+.menu-toggle.active span:nth-child(3){
+  transform:rotate(-45deg) translate(5px,-5px);
 }
 
 /* ===== MOBILE ===== */
@@ -66,21 +100,21 @@
   }
 
   .nav-links{
-    position:absolute;
-    top:60px;
-    left:0;
-    width:100%;
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:70%;
+    height:100vh;
     background:#0c0a09;
     flex-direction:column;
     align-items:center;
-    gap:15px;
-    padding:20px 0;
-    display:none;
-    border-bottom:1px solid #1f1f1f;
+    justify-content:center;
+    gap:25px;
+    transition:0.4s;
   }
 
   .nav-links.active{
-    display:flex;
+    right:0;
   }
 
 }
@@ -91,7 +125,7 @@
 
   <div class="logo">SGH Music Group</div>
 
-  <div class="menu-toggle" onclick="toggleMenu()">
+  <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
@@ -127,10 +161,32 @@
 
 <script>
 
-/* ===== MOBILE TOGGLE ===== */
+/* ===== TOGGLE MENU ===== */
 function toggleMenu(){
   document.getElementById("navLinks").classList.toggle("active");
+  document.getElementById("menuToggle").classList.toggle("active");
 }
+
+/* ===== CLOSE MENU ON CLICK ===== */
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("navLinks").classList.remove("active");
+    document.getElementById("menuToggle").classList.remove("active");
+  });
+});
+
+/* ===== ACTIVE PAGE DETECT ===== */
+const currentPage = location.pathname.split("/").pop();
+document.querySelectorAll(".nav-links a").forEach(link => {
+  if(link.getAttribute("href") === currentPage){
+    link.classList.add("active");
+  }
+});
+
+/* ===== SCROLL EFFECT ===== */
+window.addEventListener("scroll", function(){
+  document.getElementById("siteHeader").classList.toggle("scrolled", window.scrollY > 10);
+});
 
 /* ===== AUTO YEAR ===== */
 document.getElementById("year").textContent = new Date().getFullYear();
