@@ -28,18 +28,18 @@ body{
 .container{
   max-width:1000px;
   margin:auto;
-  padding:20px;
+  padding:0 20px; /* 🔥 FIXED */
 }
 
 /* ===== HERO ===== */
 .hero{
   text-align:center;
-  padding:120px 20px 60px;
+  padding:100px 20px 35px; /* 🔥 FIXED */
 }
 
 .hero h2{
   font-size:40px;
-  margin-bottom:20px;
+  margin-bottom:14px;
 }
 
 .hero p{
@@ -50,19 +50,19 @@ body{
 
 /* ===== SECTIONS ===== */
 section{
-  padding:80px 20px;
-  border-bottom:1px solid #1a1a1a;
+  padding:55px 20px; /* 🔥 FIXED */
+  border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
 h3{
   text-align:center;
   font-size:28px;
-  margin-bottom:20px;
+  margin-bottom:18px; /* 🔥 FIXED */
 }
 
 p{
   max-width:750px;
-  margin:10px auto;
+  margin:8px auto; /* 🔥 FIXED */
   text-align:center;
   color:#cfcfcf;
 }
@@ -71,8 +71,9 @@ p{
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-  margin-top:40px;
+  gap:22px;
+  margin-top:18px; /* 🔥 FIXED */
+  justify-content:center;
 }
 
 .card{
@@ -80,12 +81,18 @@ p{
   border-radius:12px;
   padding:25px;
   text-align:center;
-  transition:0.3s;
+  transition:0.35s;
+  background:rgba(255,255,255,0.02);
 }
 
 .card:hover{
-  border-color:#fff;
-  transform:translateY(-5px);
+  border-color:#ffffff;
+  transform:translateY(-8px);
+
+  box-shadow:
+    0 0 10px rgba(255,255,255,0.2),
+    0 0 35px rgba(255,255,255,0.12),
+    0 15px 35px rgba(0,0,0,0.7);
 }
 
 .card h4{
@@ -103,15 +110,7 @@ a{
   text-decoration:none;
 }
 
-a:visited{
-  color:#f5f5f5;
-}
-
 a:hover{
-  color:#ffffff;
-}
-
-a:active{
   color:#ffffff;
 }
 
@@ -119,7 +118,7 @@ a:active{
 .leader-image{
   display:flex;
   justify-content:center;
-  margin:20px 0;
+  margin:18px 0;
 }
 
 .leader-image img{
@@ -154,133 +153,142 @@ a:active{
 
 <!-- ===== CONTACT INFO ===== -->
 <section>
+  <div class="container">
 
-  <h3>Contact Information</h3>
+    <h3>Contact Information</h3>
 
-  <p class="highlight">
-    P.O. Box 2514<br>
-    Corbin, KY 40702
-  </p>
+    <p class="highlight">
+      P.O. Box 2514<br>
+      Corbin, KY 40702
+    </p>
 
-  <p>
-    Email: <a href="mailto:sghmusicgroup@aol.com">sghmusicgroup@aol.com</a>
-  </p>
+    <p>
+      Email: <a href="mailto:sghmusicgroup@aol.com">sghmusicgroup@aol.com</a>
+    </p>
 
-  <p>
-    Phone: <a href="tel:6063048081">606-304-8081</a>
-  </p>
+    <p>
+      Phone: <a href="tel:6063048081">606-304-8081</a>
+    </p>
 
+  </div>
 </section>
 
 <!-- ===== FOUNDATION ===== -->
 <section>
+  <div class="container">
 
-  <h3>Built With Purpose</h3>
+    <h3>Built With Purpose</h3>
 
-  <p>
-    SGH Promotions was formed in 2023 through an inspiration that only God can give.
-    With years of experience in radio promotion, the focus has always remained clear.
-    Point people to the cross. Reach hearts. Win souls for the Kingdom.
-  </p>
+    <p>
+      SGH Promotions was formed in 2023 through an inspiration that only God can give.
+      With years of experience in radio promotion, the focus has always remained clear.
+      Point people to the cross. Reach hearts. Win souls for the Kingdom.
+    </p>
 
-  <p>
-    This is not about recognition alone. This is about impact that lasts beyond a moment.
-  </p>
+    <p>
+      This is not about recognition alone. This is about impact that lasts beyond a moment.
+    </p>
 
+  </div>
 </section>
 
 <!-- ===== LEADERSHIP ===== -->
 <section>
+  <div class="container">
 
-  <h3>Leadership</h3>
+    <h3>Leadership</h3>
 
-  <!-- ✅ IMAGE ADDED -->
-  <div class="leader-image">
-    <img src="IMG_0257.jpeg" alt="Stephanie Hager">
+    <div class="leader-image">
+      <img src="IMG_0257.jpeg" alt="Stephanie Hager">
+    </div>
+
+    <p class="highlight">Stephanie Hager</p>
+
+    <p>Founder and Radio Promoter</p>
+
+    <p>
+      A heart committed to helping artists carry their message further while keeping the mission rooted in Jesus.
+    </p>
+
   </div>
-
-  <p class="highlight">Stephanie Hager</p>
-
-  <p>
-    Founder and Radio Promoter
-  </p>
-
-  <p>
-    A heart committed to helping artists carry their message further while keeping the mission rooted in Jesus.
-  </p>
-
 </section>
 
 <!-- ===== TEAM ===== -->
 <section>
+  <div class="container">
 
-  <h3>Our Team</h3>
+    <h3>Our Team</h3>
 
-  <p>
-    A volunteer team placed in different areas, working together to support each event and each opportunity.
-    Years of experience in concert promotion combined with a shared purpose creates something greater than any one individual.
-  </p>
+    <p>
+      A volunteer team placed in different areas, working together to support each event and each opportunity.
+      Years of experience in concert promotion combined with a shared purpose creates something greater than any one individual.
+    </p>
 
-  <p class="highlight">
-    Celebrating over 30 years in concert promotions
-  </p>
+    <p class="highlight">
+      Celebrating over 30 years in concert promotions
+    </p>
 
+  </div>
 </section>
 
 <!-- ===== SERVICES ===== -->
 <section>
+  <div class="container">
 
-  <h3>What We Offer</h3>
+    <h3>What We Offer</h3>
 
-  <div class="grid container">
+    <div class="grid">
 
-    <div class="card">
-      <h4>Radio Promotion</h4>
-      <p>
-        International radio coverage, featured advertising, and consistent release distribution designed to carry your message further.
-      </p>
-    </div>
+      <div class="card">
+        <h4>Radio Promotion</h4>
+        <p>
+          International radio coverage, featured advertising, and consistent release distribution designed to carry your message further.
+        </p>
+      </div>
 
-    <div class="card">
-      <h4>Concert Promotion</h4>
-      <p>
-        Hosting and organizing events across multiple states, creating opportunities for artists to minister and reach lives.
-      </p>
-    </div>
+      <div class="card">
+        <h4>Concert Promotion</h4>
+        <p>
+          Hosting and organizing events across multiple states, creating opportunities for artists to minister and reach lives.
+        </p>
+      </div>
 
-    <div class="card">
-      <h4>Artist Booking</h4>
-      <p>
-        Connecting churches and events with the right artists for worship services, homecomings, benefits, and more.
-      </p>
-    </div>
+      <div class="card">
+        <h4>Artist Booking</h4>
+        <p>
+          Connecting churches and events with the right artists for worship services, homecomings, benefits, and more.
+        </p>
+      </div>
 
-    <div class="card">
-      <h4>Artist Products</h4>
-      <p>
-        Providing high quality materials including banners, apparel, and promotional items that reflect your message with excellence.
-      </p>
+      <div class="card">
+        <h4>Artist Products</h4>
+        <p>
+          Providing high quality materials including banners, apparel, and promotional items that reflect your message with excellence.
+        </p>
+      </div>
+
     </div>
 
   </div>
-
 </section>
 
 <!-- ===== HEART ===== -->
 <section>
+  <div class="container">
 
-  <h3>The Mission Remains</h3>
+    <h3>The Mission Remains</h3>
 
-  <p>
-    Every opportunity is a chance to reach someone.
-    Every event is a chance to minister.
-    Every song is a chance to remind someone that Jesus is still the answer.
-  </p>
+    <p>
+      Every opportunity is a chance to reach someone.
+      Every event is a chance to minister.
+      Every song is a chance to remind someone that Jesus is still the answer.
+    </p>
 
-  <p class="highlight">
-    That has always been the goal. That will always remain the focus.
-  </p>
+    <p class="highlight">
+      That has always been the goal. That will always remain the focus.
+    </p>
 
+  </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
@@ -298,30 +306,6 @@ Promise.all([
   window.toggleMenu = function(){
     document.getElementById("navLinks").classList.toggle("active");
     document.getElementById("menuToggle").classList.toggle("active");
-  }
-
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      document.getElementById("navLinks").classList.remove("active");
-      document.getElementById("menuToggle").classList.remove("active");
-    });
-  });
-
-  const currentPage = location.pathname.split("/").pop();
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    if(link.getAttribute("href") === currentPage){
-      link.classList.add("active");
-    }
-  });
-
-  window.addEventListener("scroll", function(){
-    document.getElementById("siteHeader")
-      .classList.toggle("scrolled", window.scrollY > 10);
-  });
-
-  const yearEl = document.getElementById("year");
-  if(yearEl){
-    yearEl.textContent = new Date().getFullYear();
   }
 
 });
