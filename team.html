@@ -21,12 +21,12 @@ body{
 /* HERO */
 .hero{
   text-align:center;
-  padding:120px 20px 50px;
+  padding:100px 20px 40px;
 }
 
 .hero h2{
   font-size:36px;
-  margin-bottom:15px;
+  margin-bottom:12px;
 }
 
 .hero p{
@@ -38,7 +38,7 @@ body{
 /* SECTION TEXT */
 .section-text{
   text-align:center;
-  padding:30px 20px;
+  padding:20px 20px 0;
 }
 
 .section-text p{
@@ -47,23 +47,117 @@ body{
   color:#cfcfcf;
 }
 
-/* GRID */
-.grid{
-  max-width:1100px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-  padding:40px 20px;
+/* ===== LEADERSHIP CARD ===== */
+.leader-card{
+  max-width:420px;
+  margin:40px auto;
+
+  padding:22px;
+
+  border:1px solid #2a2a2a;
+  border-radius:14px;
+
+  text-align:center;
+
+  background:rgba(255,255,255,0.02);
+
+  transition:0.35s ease;
 }
 
-/* CARD */
+.leader-card:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 0 25px rgba(255,255,255,0.08),
+    0 15px 40px rgba(0,0,0,0.8);
+}
+
+.leader-card img{
+  width:240px;
+  height:auto;
+  border-radius:12px;
+  margin-bottom:14px;
+
+  transition:0.3s ease;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,0.7);
+}
+
+.leader-card:hover img{
+  transform:scale(1.03);
+  box-shadow:
+    0 0 30px rgba(255,255,255,0.12),
+    0 20px 40px rgba(0,0,0,0.85);
+}
+
+/* ===== SERVICES ===== */
+.services{
+  max-width:1100px;
+  margin:20px auto 10px;
+  padding:0 20px;
+  text-align:center;
+}
+
+.services h3{
+  margin-bottom:18px;
+}
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+.service-card{
+  border:1px solid #2a2a2a;
+  border-radius:14px;
+  padding:20px;
+
+  background:rgba(255,255,255,0.02);
+
+  transition:0.35s ease;
+  text-align:left;
+}
+
+.service-card:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 0 25px rgba(255,255,255,0.08),
+    0 15px 40px rgba(0,0,0,0.8);
+}
+
+.service-card h4{
+  margin-bottom:10px;
+}
+
+.service-card p{
+  font-size:14px;
+  color:#cfcfcf;
+  margin-bottom:10px;
+  line-height:1.5;
+}
+
+.service-note{
+  font-size:13px;
+  color:#aaa;
+}
+
+/* ===== GRID ===== */
+.grid{
+  max-width:1100px;
+  margin:20px auto 40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:22px;
+  padding:0 20px;
+}
+
 .card{
   border:1px solid #2a2a2a;
   border-radius:14px;
   overflow:hidden;
-  transition:.3s;
-  transition:0.35s ease;
+  transition:.35s;
+  background:rgba(255,255,255,0.02);
 }
 
 .card:hover{
@@ -81,21 +175,17 @@ body{
 
   transition:0.35s ease;
 
-  /* 🔥 subtle base depth */
   box-shadow:
     0 8px 20px rgba(0,0,0,0.6);
 }
 
-/* 🔥 MATCHES YOUR LEADERSHIP HOVER */
 .card:hover img{
   transform:scale(1.03);
-
   box-shadow:
     0 0 30px rgba(255,255,255,0.12),
     0 20px 40px rgba(0,0,0,0.8);
 }
 
-/* CONTENT */
 .card-content{
   padding:15px;
   text-align:center;
@@ -106,7 +196,6 @@ body{
   color:#fff;
 }
 
-/* BUTTON */
 .btn{
   display:inline-block;
   margin-top:10px;
@@ -116,121 +205,79 @@ body{
   border-radius:4px;
 }
 
-/* BETTER TEXT FOR LONG CONTENT */
-.card p{
-  text-align:left;
-  font-size:14px;
-  line-height:1.6;
-  color:#cfcfcf;
-}
-
 </style>
 
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
 <div id="header"></div>
 
-<!-- ===== HERO ===== -->
 <section class="hero">
   <h2>Our Team</h2>
-
   <p>
     Each person represented here carries more than a voice. They carry a message meant to reach lives at the right moment.
     This is a group connected by purpose, committed to sharing truth through music that speaks beyond the surface.
   </p>
 </section>
 
-<!-- ===== PURPOSE ===== -->
 <section class="section-text">
   <p>
     Every artist and ministry here plays a role in reaching hearts, strengthening faith, and pointing people back to Jesus.
-    What is carried through each voice is handled with intention and care.
   </p>
 </section>
 
-<!-- ===== LEADERSHIP ===== -->
-<section class="section-text">
-  <h3>Leadership</h3>
-</section>
+<!-- LEADERSHIP -->
+<div class="leader-card">
 
-<section class="grid">
+  <img src="172949F1-5CD0-4FCF-A65F-AE3ADE92BAA9.png" alt="The Hagers">
 
-  <div class="card">
-    <img src="172949F1-5CD0-4FCF-A65F-AE3ADE92BAA9.png" alt="The Hagers">
-    <div class="card-content">
+  <h4>The Hagers</h4>
 
-      <h4>The Hagers</h4>
+  <p style="font-size:13px; color:#cfcfcf;">
+    Stephanie Hager, Founder and Radio Promoter<br>
+    David Hager, Concert Director
+  </p>
 
-      <p>
-        <strong>Stephanie Hager</strong><br>
-        Founder / Radio Promoter
-      </p>
+</div>
 
-      <p>
-        <strong>David Hager</strong><br>
-        Concert Director
-      </p>
+<!-- SERVICES -->
+<section class="services">
 
-    </div>
-  </div>
-
-</section>
-
-<!-- ===== SERVICES ===== -->
-<section class="section-text">
   <h3>Services We Offer</h3>
-</section>
 
-<section class="grid">
+  <div class="services-grid">
 
-  <div class="card">
-    <h4>Radio Promotion</h4>
-    <p>
-      For 4 months you will get radio coverage internationally as well as 1 featured ad in Christian Voice Magazine and Cashbox Magazine.
-      We will send out releases every 4 months (January, April, July, October as well as a Christmas Release) to all charting and non charting stations.
-    </p>
-  </div>
+    <div class="service-card">
+      <h4>Radio Promotion</h4>
+      <p>International radio coverage and featured ads with scheduled releases throughout the year.</p>
+    </div>
 
-  <div class="card">
-    <h4>Concert Promotions</h4>
-    <p>
-      By Handpicking our Artists, we host Special Events in different areas like Ohio, West Virginia, Tennessee, Kentucky, South Carolina, North Carolina and would love an opportunity to come to your area and minister.
-      SGH Music Group provides booking opportunities whether it be for a Worship Service, Homecoming, Benefit Singing, Conventions, and Showcases.
-      Our goal is and always has been reaching the lost through Southern Gospel Music.
-    </p>
-  </div>
+    <div class="service-card">
+      <h4>Concert Promotions</h4>
+      <p>Events hosted across multiple states with opportunities to expand ministry reach.</p>
+    </div>
 
-  <div class="card">
-    <h4>Popular Question</h4>
-    <p>
-      How can we get SGH Music Group or one of their artists to our event or church service?
-      You can give us a call and we can connect you with the right artist for your event.
-      We do believe in taking care of our artists and request a Love Offering to be taken to assist with the cost of travel.
-    </p>
-  </div>
+    <div class="service-card">
+      <h4>Booking</h4>
+      <p>Connection to the right artist for worship services, homecomings, and events.</p>
+      <p class="service-note">Love offering supports artist travel.</p>
+    </div>
 
-  <div class="card">
-    <h4>Artist Product</h4>
-    <p>
-      We provide top quality products for artists as well. Items like Backdrops, Tablecloths, Retractable Banners, Tumblers, T-shirts, etc.
-      Contact Stephanie Hager for all your product needs at (606) 304-8081.
-    </p>
+    <div class="service-card">
+      <h4>Artist Products</h4>
+      <p>Backdrops, banners, apparel, and more to represent your message with excellence.</p>
+    </div>
+
   </div>
 
 </section>
 
-<!-- ===== ARTISTS ===== -->
-<section class="section-text">
-  <h3>Artists</h3>
-</section>
-
+<!-- ARTISTS -->
 <section class="grid">
 
   <div class="card">
     <a href="https://www.crimsonchord.com" target="_blank">
-      <img src="67857DF5-F2F4-47C6-9881-036051B80554.png" alt="Crimson Chord">
+      <img src="67857DF5-F2F4-47C6-9881-036051B80554.png">
       <div class="card-content">
         <h4>Crimson Chord</h4>
         <span class="btn">Visit Ministry</span>
@@ -240,7 +287,7 @@ body{
 
   <div class="card">
     <a href="https://www.greg-finch-ministries.com" target="_blank">
-      <img src="0B063BAF-0D82-42A2-93C2-751AB67A75AE.png" alt="Greg Finch">
+      <img src="0B063BAF-0D82-42A2-93C2-751AB67A75AE.png">
       <div class="card-content">
         <h4>Greg Finch</h4>
         <span class="btn">Visit Ministry</span>
@@ -250,7 +297,7 @@ body{
 
   <div class="card">
     <a href="https://www.chrisperduemusic.com" target="_blank">
-      <img src="EB4E45A1-7E00-4E29-934E-9D5515FF95F7.png" alt="Chris Perdue">
+      <img src="EB4E45A1-7E00-4E29-934E-9D5515FF95F7.png">
       <div class="card-content">
         <h4>Chris Perdue</h4>
         <span class="btn">Visit Ministry</span>
@@ -260,7 +307,7 @@ body{
 
   <div class="card">
     <a href="https://www.greaterpurposemusic.com" target="_blank">
-      <img src="198E9C16-E06C-4B71-8749-72B46B8A3D04.png" alt="Greater Purpose">
+      <img src="198E9C16-E06C-4B71-8749-72B46B8A3D04.png">
       <div class="card-content">
         <h4>Greater Purpose</h4>
         <span class="btn">Visit Ministry</span>
@@ -270,7 +317,6 @@ body{
 
 </section>
 
-<!-- ===== FOOTER ===== -->
 <div id="footer"></div>
 
 <script>
@@ -278,39 +324,8 @@ Promise.all([
   fetch("header.html").then(res => res.text()),
   fetch("footer.html").then(res => res.text())
 ]).then(([headerData, footerData]) => {
-
   document.getElementById("header").innerHTML = headerData;
   document.getElementById("footer").innerHTML = footerData;
-
-  window.toggleMenu = function(){
-    document.getElementById("navLinks").classList.toggle("active");
-    document.getElementById("menuToggle").classList.toggle("active");
-  }
-
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      document.getElementById("navLinks").classList.remove("active");
-      document.getElementById("menuToggle").classList.remove("active");
-    });
-  });
-
-  const currentPage = location.pathname.split("/").pop();
-  document.querySelectorAll(".nav-links a").forEach(link => {
-    if(link.getAttribute("href") === currentPage){
-      link.classList.add("active");
-    }
-  });
-
-  window.addEventListener("scroll", function(){
-    document.getElementById("siteHeader")
-      .classList.toggle("scrolled", window.scrollY > 10);
-  });
-
-  const yearEl = document.getElementById("year");
-  if(yearEl){
-    yearEl.textContent = new Date().getFullYear();
-  }
-
 });
 </script>
 
