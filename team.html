@@ -63,10 +63,11 @@ body{
   border-radius:14px;
   overflow:hidden;
   transition:.3s;
+  transition:0.35s ease;
 }
 
 .card:hover{
-  transform:translateY(-5px);
+  transform:translateY(-6px);
   border-color:#fff;
 }
 
@@ -75,6 +76,23 @@ body{
   height:260px;
   object-fit:contain;
   background:#000;
+
+  border-radius:10px;
+
+  transition:0.35s ease;
+
+  /* 🔥 subtle base depth */
+  box-shadow:
+    0 8px 20px rgba(0,0,0,0.6);
+}
+
+/* 🔥 MATCHES YOUR LEADERSHIP HOVER */
+.card:hover img{
+  transform:scale(1.03);
+
+  box-shadow:
+    0 0 30px rgba(255,255,255,0.12),
+    0 20px 40px rgba(0,0,0,0.8);
 }
 
 /* CONTENT */
