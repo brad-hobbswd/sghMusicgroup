@@ -28,42 +28,42 @@ body{
 .container{
   max-width:1100px;
   margin:auto;
-  padding:20px;
+  padding:0 20px; /* removed vertical padding */
 }
 
 /* ===== HERO ===== */
 .hero{
   text-align:center;
-  padding:120px 20px 70px;
+  padding:100px 20px 50px; /* tighter */
 }
 
 .hero h2{
-  font-size:42px;
-  margin-bottom:20px;
+  font-size:40px;
+  margin-bottom:14px;
 }
 
 .hero p{
   max-width:700px;
-  margin:auto;
+  margin:0 auto;
   color:#cfcfcf;
   font-size:16px;
 }
 
 /* ===== SECTIONS ===== */
 section{
-  padding:80px 20px;
-  border-bottom:1px solid #1a1a1a;
+  padding:60px 20px; /* reduced from 80 */
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
 
 section h3{
   text-align:center;
-  font-size:28px;
-  margin-bottom:20px;
+  font-size:26px;
+  margin-bottom:12px;
 }
 
 section p{
   max-width:750px;
-  margin:10px auto;
+  margin:8px auto;
   text-align:center;
   color:#cfcfcf;
 }
@@ -72,13 +72,14 @@ section p{
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:25px;
-  margin-top:40px;
+  gap:20px; /* tighter */
+  margin-top:25px; /* reduced */
 }
 
+/* ===== CARD ===== */
 .card{
   border:1px solid #2a2a2a;
-  padding:25px;
+  padding:22px;
   border-radius:10px;
   text-align:center;
   transition:0.3s;
@@ -86,11 +87,28 @@ section p{
 
 .card:hover{
   border-color:#ffffff;
-  transform:translateY(-5px);
+  transform:translateY(-4px);
 }
 
 .card h4{
-  margin-bottom:10px;
+  margin-bottom:8px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width:768px){
+
+  .hero{
+    padding:90px 18px 40px;
+  }
+
+  section{
+    padding:50px 18px;
+  }
+
+  .hero h2{
+    font-size:32px;
+  }
+
 }
 
 </style>
@@ -131,7 +149,7 @@ section p{
 <section>
   <h3>What We Do</h3>
 
-  <div class="grid container">
+  <div class="grid">
 
     <div class="card">
       <h4>Radio Promotion</h4>
@@ -183,7 +201,6 @@ section p{
 <!-- ===== FOOTER ===== -->
 <div id="footer"></div>
 
-<!-- ===== LOAD HEADER + FOOTER + NAV LOGIC ===== -->
 <script>
 Promise.all([
   fetch("header.html").then(res => res.text()),
@@ -193,13 +210,11 @@ Promise.all([
   document.getElementById("header").innerHTML = headerData;
   document.getElementById("footer").innerHTML = footerData;
 
-  // Toggle menu
   window.toggleMenu = function(){
     document.getElementById("navLinks").classList.toggle("active");
     document.getElementById("menuToggle").classList.toggle("active");
   }
 
-  // Close menu
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
       document.getElementById("navLinks").classList.remove("active");
@@ -207,7 +222,6 @@ Promise.all([
     });
   });
 
-  // Active page highlight
   const currentPage = location.pathname.split("/").pop();
   document.querySelectorAll(".nav-links a").forEach(link => {
     if(link.getAttribute("href") === currentPage){
@@ -215,13 +229,11 @@ Promise.all([
     }
   });
 
-  // Scroll effect
   window.addEventListener("scroll", function(){
     document.getElementById("siteHeader")
       .classList.toggle("scrolled", window.scrollY > 10);
   });
 
-  // Auto year
   const yearEl = document.getElementById("year");
   if(yearEl){
     yearEl.textContent = new Date().getFullYear();
