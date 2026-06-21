@@ -84,9 +84,21 @@ body{
 
   margin:0 auto 35px;
 
+  border-radius:24px;
+
+  transition:.3s ease;
+
   filter:
-    drop-shadow(0 0 12px rgba(212,175,55,.25))
-    drop-shadow(0 0 35px rgba(212,175,55,.12));
+    drop-shadow(
+      0 8px 18px rgba(0,0,0,.45)
+    )
+    drop-shadow(
+      0 0 6px rgba(212,175,55,.08)
+    );
+}
+
+.hero-logo:hover{
+  transform:translateY(-2px);
 }
 
 .hero h2{
