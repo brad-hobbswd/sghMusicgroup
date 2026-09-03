@@ -1,378 +1,492 @@
 <!doctype html>
 <html lang="en">
 <head>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>SGH Music Group</title>
+<title>SGH Music Group | Gospel Artists, Radio Promotion & Ministry Music</title>
+<meta name="description" content="SGH Music Group is a Gospel music family connecting artists, ministries, radio promotion, concert opportunities, and music that points hearts to Jesus.">
+<meta name="keywords" content="SGH Music Group, Gospel music, Southern Gospel, Christian artists, Gospel artists, radio promotion, concert promotion, artist booking, ministry music">
+<meta name="author" content="SGH Music Group">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://brad-hobbswd.github.io/sghMusicgroup/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="SGH Music Group | A Group Where You Are Family">
+<meta property="og:description" content="Discover Gospel artists, music, radio promotion, concert opportunities, and ministry through SGH Music Group.">
+<meta property="og:url" content="https://brad-hobbswd.github.io/sghMusicgroup/">
+<meta property="og:image" content="https://brad-hobbswd.github.io/sghMusicgroup/D6FE0D35-5FC7-4C31-ABE0-BCEA10E4A5CE.png">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SGH Music Group">
+<meta name="twitter:description" content="Gospel artists, ministry music, radio promotion, and concert opportunities.">
+<meta name="twitter:image" content="https://brad-hobbswd.github.io/sghMusicgroup/D6FE0D35-5FC7-4C31-ABE0-BCEA10E4A5CE.png">
 
 <style>
-
-/* ===== COLOR PALETTE ===== */
-
 :root{
-
   --bg:#050505;
   --surface:#0b0b0b;
-
+  --surface-soft:#101010;
   --gold:#d4af37;
   --gold-light:#f4d06f;
-  --gold-rich:#b8860b;
-
+  --gold-deep:#8e6810;
   --text:#f8f5ef;
-  --text-muted:#c9c3b5;
-
-  --border:rgba(212,175,55,.15);
-
+  --muted:#c9c3b5;
+  --line:rgba(212,175,55,.16);
 }
 
-/* ===== RESET ===== */
+*{margin:0;padding:0;box-sizing:border-box}
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-/* ===== BODY ===== */
+html{scroll-behavior:smooth}
 
 body{
-  font-family:system-ui,-apple-system,sans-serif;
-
-  background:#050505;
-
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 50% -10%,rgba(212,175,55,.12),transparent 30%),
+    linear-gradient(180deg,#060606 0%,#050505 55%,#080808 100%);
   color:var(--text);
-
   line-height:1.7;
 }
 
-/* ===== CONTAINER ===== */
+img{max-width:100%;display:block}
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:0 20px;
-}
-
-/* ===== HERO ===== */
+.container{width:min(1180px,calc(100% - 40px));margin:auto}
 
 .hero{
-  text-align:center;
-  padding:120px 20px 70px;
-  background:#050505;
+  min-height:760px;
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+  padding:90px 0 70px;
+  border-bottom:1px solid var(--line);
 }
 
-/* ===== LOGO ===== */
+.hero::before,
+.hero::after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  pointer-events:none;
+}
+
+.hero::before{
+  width:620px;
+  height:620px;
+  background:radial-gradient(circle,rgba(212,175,55,.12),transparent 68%);
+  top:-260px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.hero::after{
+  width:100%;
+  height:220px;
+  bottom:-160px;
+  background:radial-gradient(ellipse,rgba(212,175,55,.09),transparent 68%);
+}
+
+.hero-inner{
+  position:relative;
+  z-index:1;
+  text-align:center;
+  width:min(900px,100%);
+}
 
 .hero-logo{
-
-  display:block;
-
-  width:360px;
-  max-width:95%;
-
-  margin:0 auto 35px;
-
-  filter:
-    drop-shadow(
-      0 10px 20px rgba(0,0,0,.55)
-    );
-
-  transition:.3s ease;
+  width:min(350px,78vw);
+  margin:0 auto 28px;
+  filter:drop-shadow(0 18px 28px rgba(0,0,0,.65));
 }
 
-.hero-logo:hover{
-  transform:translateY(-2px);
-}
-
-/* ===== HERO TEXT ===== */
-
-.hero h2{
-
-  font-size:48px;
-
+.kicker,
+.eyebrow{
   color:var(--gold-light);
-
-  margin-bottom:18px;
-
-  letter-spacing:.5px;
-
-  text-shadow:
-    0 0 8px rgba(212,175,55,.12);
+  font-size:.76rem;
+  font-weight:800;
+  letter-spacing:.2em;
+  text-transform:uppercase;
 }
+
+.hero h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(3rem,7vw,6.6rem);
+  line-height:.95;
+  letter-spacing:-.045em;
+  margin:18px 0 22px;
+  color:#fffaf0;
+}
+
+.hero h1 span{display:block;color:var(--gold-light)}
 
 .hero p{
-
-  max-width:760px;
-
+  max-width:720px;
   margin:auto;
-
-  color:var(--text-muted);
-
-  font-size:18px;
+  color:var(--muted);
+  font-size:clamp(1rem,2vw,1.18rem);
 }
 
-/* ===== SECTIONS ===== */
-
-section{
-
-  padding:70px 20px;
-
-  border-bottom:
-    1px solid rgba(212,175,55,.08);
+.hero-actions{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:32px;
 }
 
-section h3{
-
-  text-align:center;
-
-  font-size:32px;
-
-  color:var(--gold-light);
-
-  margin-bottom:25px;
-
-  text-shadow:
-    0 0 8px rgba(212,175,55,.10);
-}
-
-section h3::after{
-
-  content:"";
-
-  display:block;
-
-  width:90px;
-  height:2px;
-
-  margin:15px auto 0;
-
-  background:
-    linear-gradient(
-      to right,
-      transparent,
-      var(--gold),
-      transparent
-    );
-}
-
-section p{
-
-  max-width:800px;
-
-  margin:12px auto;
-
-  text-align:center;
-
-  color:var(--text-muted);
-}
-
-/* ===== GRID ===== */
-
-.grid{
-
-  display:grid;
-
-  grid-template-columns:
-    repeat(auto-fit,minmax(240px,1fr));
-
-  gap:30px;
-
-  margin-top:35px;
-}
-
-/* ===== CARD ===== */
-
-.card{
-
-  background:var(--surface);
-
-  border:1px solid var(--border);
-
-  border-radius:16px;
-
-  padding:30px;
-
-  text-align:center;
-
-  transition:all .35s ease;
-}
-
-.card h4{
-
-  color:var(--gold-light);
-
-  margin-bottom:14px;
-
-  text-shadow:
-    0 0 6px rgba(212,175,55,.08);
-}
-
-.card p{
-  color:var(--text-muted);
-}
-
-.card:hover{
-
-  transform:translateY(-8px);
-
-  border-color:var(--gold);
-
-  box-shadow:
-    0 0 12px rgba(212,175,55,.12),
-    0 12px 30px rgba(0,0,0,.55);
-}
-
-/* ===== LINKS ===== */
-
-a{
-  color:var(--gold-light);
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 24px;
+  border:1px solid var(--gold);
+  border-radius:999px;
+  color:var(--text);
   text-decoration:none;
-  transition:.3s ease;
+  font-weight:800;
+  transition:.25s ease;
 }
 
-a:hover{
-  color:#ffffff;
+.btn-primary{
+  background:linear-gradient(135deg,var(--gold-light),var(--gold));
+  color:#171107;
 }
 
-/* ===== MOBILE ===== */
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(0,0,0,.32)}
+.btn-primary:hover{box-shadow:0 12px 30px rgba(212,175,55,.2)}
 
-@media (max-width:768px){
+.artist-strip{
+  border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.015);
+}
 
-  .hero{
-    padding:100px 20px 50px;
-  }
+.strip-inner{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:26px;
+  flex-wrap:wrap;
+  color:var(--muted);
+  font-size:.82rem;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
 
-  .hero-logo{
-    width:280px;
-  }
+.strip-inner strong{color:var(--gold-light)}
 
-  .hero h2{
-    font-size:34px;
-  }
+.section{padding:105px 0;border-bottom:1px solid var(--line)}
 
-  .hero p{
-    font-size:16px;
-  }
+.section-head{
+  max-width:760px;
+  margin:0 auto 48px;
+  text-align:center;
+}
 
-  section{
-    padding:55px 20px;
-  }
+.section h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(2.3rem,5vw,4.2rem);
+  line-height:1;
+  margin:14px 0 18px;
+  color:#fffaf0;
+}
 
-  section h3{
-    font-size:28px;
-  }
+.section-head p{color:var(--muted)}
 
+.artist-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.artist-card{
+  position:relative;
+  min-height:400px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:#090909;
+  text-decoration:none;
+  color:var(--text);
+}
+
+.artist-card img{
+  width:100%;
+  height:100%;
+  min-height:400px;
+  object-fit:contain;
+  background:#000;
+  transition:transform .5s ease;
+}
+
+.artist-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,transparent 38%,rgba(0,0,0,.92) 100%);
+}
+
+.artist-card:hover img{transform:scale(1.04)}
+
+.artist-name{
+  position:absolute;
+  z-index:1;
+  left:22px;
+  right:22px;
+  bottom:22px;
+}
+
+.artist-name span{
+  display:block;
+  color:var(--gold-light);
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  margin-bottom:4px;
+}
+
+.artist-name h3{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.75rem;
+  line-height:1.1;
+}
+
+.artist-card:hover .artist-name h3{color:var(--gold-light)}
+
+.story{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.story-copy p{color:var(--muted);margin-top:16px}
+
+.story-copy .btn{margin-top:28px}
+
+.statement{
+  padding:42px;
+  border:1px solid var(--line);
+  background:
+    radial-gradient(circle at top right,rgba(212,175,55,.12),transparent 38%),
+    var(--surface);
+}
+
+.statement blockquote{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(2rem,4vw,3.6rem);
+  line-height:1.12;
+  color:#fffaf0;
+}
+
+.statement blockquote span{color:var(--gold-light)}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.service{
+  padding:28px;
+  border:1px solid var(--line);
+  background:var(--surface);
+}
+
+.service-number{
+  color:var(--gold);
+  font-size:.75rem;
+  font-weight:800;
+  letter-spacing:.15em;
+}
+
+.service h3{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:1.45rem;
+  margin:14px 0 10px;
+  color:#fffaf0;
+}
+
+.service p{color:var(--muted);font-size:.95rem}
+
+.cta{
+  text-align:center;
+  padding:100px 0;
+  background:
+    radial-gradient(circle at center,rgba(212,175,55,.14),transparent 48%),
+    #080808;
+  border-bottom:1px solid var(--line);
+}
+
+.cta h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:clamp(2.6rem,6vw,5rem);
+  line-height:1;
+  margin:14px auto 18px;
+  color:#fffaf0;
+}
+
+.cta p{max-width:700px;margin:auto;color:var(--muted)}
+
+.cta .hero-actions{margin-top:28px}
+
+@media(max-width:950px){
+  .artist-grid,.services{grid-template-columns:repeat(2,1fr)}
+  .story{grid-template-columns:1fr;gap:35px}
+}
+
+@media(max-width:620px){
+  .container{width:min(100% - 28px,1180px)}
+  .hero{min-height:690px;padding:80px 0 60px}
+  .artist-grid,.services{grid-template-columns:1fr}
+  .artist-card,.artist-card img{min-height:380px}
+  .statement{padding:30px}
+  .section{padding:76px 0}
 }
 </style>
 
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"SGH Music Group",
+  "url":"https://brad-hobbswd.github.io/sghMusicgroup/",
+  "description":"A Gospel music group and ministry supporting artists through radio promotion, concert opportunities, booking, and artist development.",
+  "email":"sghmusicgroup@aol.com",
+  "telephone":"+1-606-304-8081",
+  "address":{"@type":"PostalAddress","postOfficeBoxNumber":"2514","addressLocality":"Corbin","addressRegion":"KY","postalCode":"40702","addressCountry":"US"}
+}
+</script>
 </head>
+
 <body>
 
-<!-- ===== HEADER ===== -->
 <div id="header"></div>
 
-<!-- ===== HERO ===== -->
-<section class="hero container">
+<main>
 
-  <img
-    src="D6FE0D35-5FC7-4C31-ABE0-BCEA10E4A5CE.png"
-    alt="SGH Music Group"
-    class="hero-logo"
-  >
-
-  <h2>A Group Where You Are Family</h2>
-
-  <p>
-    Welcome to SGH Music Group. A place where voices are not just heard, they are entrusted with purpose.
-    Music carries more than sound. Music carries truth, healing, and the power to reach a heart in a moment nothing else can.
-  </p>
-
-</section>
-
-<!-- ===== MISSION ===== -->
-<section>
-  <div class="container">
-
-    <h3>Our Mission</h3>
-
-    <p>
-      SGH Music Group exists to protect and preserve Gospel Music while helping each artist walk fully in what God has placed inside of them.
-      Recognition may come, yet the focus remains clear. One more soul reached. One more life reminded that Jesus is still the answer.
-    </p>
-
-    <p>
-      This is not about building platforms. This is about stewarding a calling.
-      Every lyric carries weight. Every voice carries responsibility.
-      What is released has the power to reach someone in a moment that could change everything.
-    </p>
-
+<section class="hero">
+  <div class="container hero-inner">
+    <img src="D6FE0D35-5FC7-4C31-ABE0-BCEA10E4A5CE.png" alt="SGH Music Group logo" class="hero-logo">
+    <div class="kicker">Gospel Music • Artists • Ministry</div>
+    <h1>Music With a <span>Message.</span></h1>
+    <p>SGH Music Group brings artists, ministries, radio promotion, concert opportunities, and Gospel music together with one purpose: carrying a message that reaches hearts and points people to Jesus.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="team.html">Meet Our Artists</a>
+      <a class="btn" href="radio-releases.html">Explore Radio Releases</a>
+    </div>
   </div>
 </section>
 
-<!-- ===== SERVICES ===== -->
-<section>
+<div class="artist-strip">
+  <div class="container strip-inner">
+    <span><strong>SGH Music Group</strong></span>
+    <span>Artist Development</span>
+    <span>Radio Promotion</span>
+    <span>Concert Opportunities</span>
+    <span>Ministry First</span>
+  </div>
+</div>
+
+<section class="section">
   <div class="container">
-
-    <h3>What We Do</h3>
-
-    <div class="grid">
-
-      <div class="card">
-        <h4>Radio Promotion</h4>
-        <p>
-          Extending your message beyond your reach so the right voice meets the right heart at the right moment.
-        </p>
-      </div>
-
-      <div class="card">
-        <h4>Event Booking</h4>
-        <p>
-          Creating spaces where music is not just performed, but where lives are touched and changed.
-        </p>
-      </div>
-
-      <div class="card">
-        <h4>Artist Development</h4>
-        <p>
-          Strengthening both sound and calling so what you carry remains clear and impactful.
-        </p>
-      </div>
-
-      <div class="card">
-        <h4>Custom Products</h4>
-        <p>
-          Providing tools that represent your message with excellence and integrity.
-        </p>
-      </div>
-
+    <div class="section-head">
+      <div class="eyebrow">The SGH Family</div>
+      <h2>Voices Carrying a Greater Purpose</h2>
+      <p>Meet artists connected through SGH Music Group and discover the ministries, voices, and music carrying the Gospel beyond the stage.</p>
     </div>
 
+    <div class="artist-grid">
+      <a class="artist-card" href="https://www.crimsonchord.com" target="_blank" rel="noopener">
+        <img src="67857DF5-F2F4-47C6-9881-036051B80554.png" alt="Crimson Chord">
+        <div class="artist-name"><span>Featured Artist</span><h3>Crimson Chord</h3></div>
+      </a>
+
+      <a class="artist-card" href="https://www.greg-finch-ministries.com" target="_blank" rel="noopener">
+        <img src="0B063BAF-0D82-42A2-93C2-751AB67A75AE.png" alt="Greg Finch">
+        <div class="artist-name"><span>Featured Artist</span><h3>Greg Finch</h3></div>
+      </a>
+
+      <a class="artist-card" href="https://www.chrisperduemusic.com" target="_blank" rel="noopener">
+        <img src="EB4E45A1-7E00-4E29-934E-9D5515FF95F7.png" alt="Chris Perdue">
+        <div class="artist-name"><span>Featured Artist</span><h3>Chris Perdue</h3></div>
+      </a>
+
+      <a class="artist-card" href="https://www.greaterpurposemusic.com" target="_blank" rel="noopener">
+        <img src="198E9C16-E06C-4B71-8749-72B46B8A3D04.png" alt="Greater Purpose">
+        <div class="artist-name"><span>Featured Artist</span><h3>Greater Purpose</h3></div>
+      </a>
+    </div>
   </div>
 </section>
 
-<!-- ===== IMPACT ===== -->
-<section>
+<section class="section">
+  <div class="container story">
+    <div class="story-copy">
+      <div class="eyebrow">More Than a Platform</div>
+      <h2>A Group Where You Are Family</h2>
+      <p>SGH Music Group exists to support ministry minded artists and groups as they share the Good News of Jesus through song. The goal is not simply to be heard. The goal is to carry the message further.</p>
+      <p>Every song, every event, and every opportunity begins with the belief that Gospel music can meet someone exactly where they are and remind them that Jesus is still the answer.</p>
+      <a class="btn" href="about.html">Discover Our Story</a>
+    </div>
+
+    <div class="statement">
+      <blockquote>“One song can reach a heart in a moment when <span>nothing else can.</span>”</blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="section">
   <div class="container">
+    <div class="section-head">
+      <div class="eyebrow">How We Serve</div>
+      <h2>Supporting the Music and the Ministry</h2>
+      <p>SGH Music Group provides practical opportunities designed to help artists share their message with excellence while keeping ministry at the center.</p>
+    </div>
 
-    <h3>One Song Can Change Everything</h3>
+    <div class="services">
+      <article class="service">
+        <div class="service-number">01</div>
+        <h3>Radio Promotion</h3>
+        <p>Helping Gospel music reach radio audiences and creating greater opportunities for songs and messages to be heard.</p>
+      </article>
 
-    <p>
-      Someone is searching. Someone is holding on. Someone is asking questions they have not spoken out loud.
-      A single song can meet them in that moment.
-    </p>
+      <article class="service">
+        <div class="service-number">02</div>
+        <h3>Concert Promotion</h3>
+        <p>Supporting concerts and events that create meaningful opportunities for artists to minister through music.</p>
+      </article>
 
-    <p>
-      A voice surrendered to purpose can remind someone that they are not forgotten.
-      That they are not alone.
-      That Jesus is still reaching.
-    </p>
+      <article class="service">
+        <div class="service-number">03</div>
+        <h3>Artist Booking</h3>
+        <p>Connecting churches and event organizers with artists for worship services, special events, homecomings, and more.</p>
+      </article>
 
+      <article class="service">
+        <div class="service-number">04</div>
+        <h3>Artist Products</h3>
+        <p>Providing promotional materials and products that help artists represent their music and ministry with excellence.</p>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
+<section class="cta">
+  <div class="container">
+    <div class="eyebrow">Stay Connected</div>
+    <h2>Let the Message Be Heard.</h2>
+    <p>Explore the artists, discover current radio releases, follow SGH Music Group news, or connect with the team about opportunities to work together.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="team.html">Explore Artists</a>
+      <a class="btn" href="about.html">Contact SGH Music Group</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
 <div id="footer"></div>
 
 <script>
@@ -380,14 +494,13 @@ Promise.all([
   fetch("header.html").then(res => res.text()),
   fetch("footer.html").then(res => res.text())
 ]).then(([headerData, footerData]) => {
-
   document.getElementById("header").innerHTML = headerData;
   document.getElementById("footer").innerHTML = footerData;
 
   window.toggleMenu = function(){
     document.getElementById("navLinks").classList.toggle("active");
     document.getElementById("menuToggle").classList.toggle("active");
-  }
+  };
 
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
@@ -396,7 +509,7 @@ Promise.all([
     });
   });
 
-  const currentPage = location.pathname.split("/").pop();
+  const currentPage = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-links a").forEach(link => {
     if(link.getAttribute("href") === currentPage){
       link.classList.add("active");
@@ -405,14 +518,11 @@ Promise.all([
 
   window.addEventListener("scroll", function(){
     document.getElementById("siteHeader")
-      .classList.toggle("scrolled", window.scrollY > 10);
+      ?.classList.toggle("scrolled", window.scrollY > 10);
   });
 
   const yearEl = document.getElementById("year");
-  if(yearEl){
-    yearEl.textContent = new Date().getFullYear();
-  }
-
+  if(yearEl) yearEl.textContent = new Date().getFullYear();
 });
 </script>
 
