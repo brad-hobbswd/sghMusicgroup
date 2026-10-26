@@ -1,79 +1,27 @@
-# SGH Music Group
+# SGH Music Group | Gospel Artists, Music & Ministry
 
-Official website for **SGH Music Group**, showcasing music projects, artists, releases, performances, and creative collaborations.
-
-## About
-
-SGH Music Group is dedicated to creating and sharing music that inspires, connects, and entertains. This website serves as a central hub for listeners, supporters, and industry professionals to explore music releases, artist information, upcoming events, and contact opportunities.
-
-## Features
-
-- Artist and group profiles
-- Music releases and featured projects
-- Photo and media galleries
-- Event and performance information
-- Contact and booking inquiries
-- Mobile friendly design
-- Fast and lightweight performance
-
-## Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript
-- Responsive Web Design
-- GitHub Pages Hosting
+A music group project presenting its identity, music, creative work, and opportunities for listeners or collaborators to connect.
 
 ## Live Website
+https://brad-hobbswd.github.io/sghMusicgroup/
 
-Visit the site:
+## Project Overview
+SGH Music Group supports Gospel artists through music, radio promotion, concert opportunities, booking, and ministry.
 
-https://brad-hobbswd.github.io/sghMusicgroup
+## Pages
+- `about.html`
+- `news.html`
+- `radio-releases.html`
+- `team.html`
 
-## Project Structure
+## Technology
+Static website published through GitHub Pages. Project pages use the HTML and supporting styles, scripts, and assets included in this repository.
 
-```text
-sghMusicgroup/
-│
-├── index.html
-├── about.html
-├── music.html
-├── gallery.html
-├── contact.html
-├── styles.css
-├── script.js
-├── images/
-└── assets/
-```
+## Copyright and Permissions
+Copyright © 2026 Bradley Hobbs. All rights reserved.
 
-## Installation
+Original writing, music or media owned by this project, website copy, graphics, visual designs, and source code are protected by copyright. Please obtain written permission before reproducing, redistributing, modifying, or commercially using original materials, except where applicable law permits otherwise. Third-party materials remain subject to the rights and terms of their owners.
 
-To run locally:
-
-```bash
-git clone https://github.com/brad-hobbswd/sghMusicgroup.git
-cd sghMusicgroup
-```
-
-Open `index.html` in your web browser.
-
-## Contributing
-
-Suggestions and improvements are welcome. Fork the repository, create a feature branch, and submit a pull request.
-
-## License
-
-Copyright © 2026 SGH Music Group. All rights reserved.
-
-Unauthorized reproduction, distribution, or modification of any content on this website without written permission is prohibited.
-
-## Developer
-
-Designed and developed by **Brad Hobbs Web Design**.
-
-Portfolio Website:
-https://brad-hobbswd.github.io/brad-hobbswd
-
----
-
-*"Music has the power to bring people together, tell stories, and create lasting memories."*
+## Search Engine Files
+- [Sitemap](sitemap.xml)
+- [robots.txt](robots.txt)
